@@ -5,7 +5,8 @@
 
 
 // Steps to follow
-
+1. create a function that accepts a number and a string as an arguement
+2. use the repeat function in JS
 */
 
 const repeatStr = function (n, anyString) {
