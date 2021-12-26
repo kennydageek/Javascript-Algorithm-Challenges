@@ -5,11 +5,13 @@
    sentence
 
 // Steps to follow
-1. create an empty array for keys and values
-2. create a function called dictionary
-3. write a for loop that runs from 1 to 20 and for each iteration push the iteration number into keys and push 2 * iteration number into values
-4. call the function
-5. Log the array keys to the console
+1. Create a function that accepts anyString as an arguement
+2. Set a wordNumber variable to zero
+3. Loop over any string and increase the wordNumber by 1 
+   when there is a space
+4. Add 1 to the wordNumber after the loop to account for
+   an extra word
+5. return the wordNumber
 */
 
 const emptyString = "Hi, I'm Kenny and I'm a Javascript developer";
