@@ -1,29 +1,25 @@
 /*
-Write simple .camelCase method (camel_case function in PHP, CamelCase in C# or camelCase in Java) for strings. All words must have their first letter capitalized without spaces.
+The marketing team is spending way too much time typing in hashtags.
+Let's help them with our own Hashtag Generator!
 
-For instance:
+Here's the deal:
 
-"hello case".camelCase() => HelloCase
-"camel case word".camelCase() => CamelCaseWord
+It must start with a hashtag (#).
+All words must have their first letter capitalized.
+If the final result is longer than 140 chars it must return false.
+If the input or the result is an empty string it must return false.
 */
 
-const testString = "test case"
+const testString = "hash tag"
 
-const camelCase = function (string) {
-    // 1) Split strings into 
-    const stringArray = string.split(" ");
+function generateHashtag(str) {
+    let hashtag = '#';
+    const result = hashtag + str.split(' ').map(cur => cur[0].toUpperCase() + cur.slice(1)).join('');
 
-    // 2) loop over the array and capitalize the first letter of each word
-    let capitalize = stringArray.map(cur => {
-        const capitalize = cur[0].toUpperCase() + cur.slice(1);
-        return capitalize;
-    })
+    if (result.length > 140) return false;
+    if (result.length = 0) return false;
 
-    // 3) Join the element together
-    let capString = capitalize.join("");
-    return capString
+    else return result
 }
 
-
-
-console.log(camelCase(testString));
+console.log(generateHashtag(testString));
